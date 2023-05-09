@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Lineup</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Player Lineup</h1>
+    <hr>
+    <div class="player-register">
+        <label for="playerName">Player Name: </label>
+        <input type="text" id="playerName" name="playerName">
+        <label for="playerPosition">Position: </label>
+        <select name="playerPosition" id="playerPosition">
+            <option value="" disabled selected></option>
+            <option value="GK">GK - Goal Keeper (Goleiro)</option>
+            <option value="CB">CB - Centre-Back (Zagueiro)</option>
+            <option value="RB">RB - Right Back (Lateral direito)</option>
+            <option value="LB">LB - Left Back (Lateral Esquerdo)</option>
+            <option value="CDM">CDM - Central Defensive Midfielder (Volante)</option>
+            <option value="CM">CM - Central Midfielder (Meio campo)</option>
+            <option value="RM">RM - Right Midfielder (Meia direita)</option>
+            <option value="LM">LM - Left Midfielder (Meia Esquerda)</option>
+            <option value="CAM">CAM - Central Attacking Midfielder (Meia central)</option>
+            <option value="LW">LW - Left Wing (Ponta esquerda)</option>
+            <option value="RW">RW - Right Wing (Ponta direita)</option>
+            <option value="CF">CF - Centre Forward (Segundo Atacante)</option>
+            <option value="ST">ST - Striker (Atacante)</option>
+        </select>
+        <label for="playerNumber">Number: </label>
+        <input type="number" id="playerNumber" name="playerNumber">
+        <div class="btn">
+            <button onclick="addPlayer()">Add</button>
+            <button onclick="removePlayer()">Remove</button>
+        </div>
+        
+    </div>
+    <hr>
+    <section id="section-list-players">
+        <table id="table-list-players">
+            <tr>
+                <th id="th-player">Player</th>
+                <th>Position</th>
+                <th>Number</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+        </table>
+    </section>
+</body>
+</html>
